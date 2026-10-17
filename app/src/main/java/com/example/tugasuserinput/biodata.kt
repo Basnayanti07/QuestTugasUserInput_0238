@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -190,6 +191,11 @@ fun FormBiodata(modifier: Modifier = Modifier){
                             },
                             onValueChange = { }
                         )
+                        ExposedDropdownMenuBox(
+                            expanded = menuTerbuka.value,
+                            onExpandedChange = { menuTerbuka.value = it },
+                            modifier = Modifier.weight(1f)
+                        ){}
                     }
                 }
             }
