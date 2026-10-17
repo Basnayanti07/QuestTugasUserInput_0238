@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="tinggi_header">180dp</dimen>
+    <dimen name="jarak_atas_kartu">110dp</dimen>
+    <dimen name="radius_kartu">28dp</dimen>
+    <dimen name="radius_field">20dp</dimen>
+    <dimen name="padding_kartu">12dp</dimen>
+    <dimen name="jarak_kecil">8dp</dimen>
+    <dimen name="jarak_sedang">6dp</dimen>
+    <dimen name="jarak_besar">6dp</dimen>
+    <dimen name="tinggi_tombol">42dp</dimen>
+    <dimen name="tinggi_field">48dp</dimen>
+    <dimen name="elevasi_kartu">10dp</dimen>
+    <dimen name="padding_hasil">8dp</dimen>
+</resources>
