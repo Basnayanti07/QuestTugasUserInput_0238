@@ -101,6 +101,11 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         fontWeight = FontWeight.Bold,
                         color = colorResource(id = R.color.ungu_judul)
                     )
+                    Text(
+                        text = stringResource(id = R.string.subjudul_form),
+                        fontSize = integerResource(id = R.integer.font_subjudul).sp,
+                        color = colorResource(id = R.color.abu_teks)
+                    )
                 }
             }
         }
