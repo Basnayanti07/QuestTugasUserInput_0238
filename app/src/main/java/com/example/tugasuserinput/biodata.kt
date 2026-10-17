@@ -259,6 +259,16 @@ fun FormBiodata(modifier: Modifier = Modifier){
                                 fontSize = integerResource(id = R.integer.font_checkbox).sp
                             )
                         }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = skillUiux.value,
+                                onCheckedChange = { skillUiux.value = it }
+                            )
+                            Text(
+                                text = stringResource(id = R.string.skill_uiux),
+                                fontSize = integerResource(id = R.integer.font_checkbox).sp
+                            )
+                        }
                     }
                 }
             }
