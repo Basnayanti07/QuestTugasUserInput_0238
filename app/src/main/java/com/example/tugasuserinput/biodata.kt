@@ -13,6 +13,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -22,9 +23,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.integerResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun FormBiodata(modifier: Modifier = Modifier){
@@ -90,7 +94,14 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         .verticalScroll(rememberScrollState())
                         .padding(dimensionResource(id = R.dimen.padding_kartu)),
                     horizontalAlignment = Alignment.CenterHorizontally
-                ){}
+                ){
+                    Text(
+                        text = stringResource(id = R.string.judul_form),
+                        fontSize = integerResource(id = R.integer.font_judul).sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.ungu_judul)
+                    )
+                }
             }
         }
     }
