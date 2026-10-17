@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparan">#00000000</color>
+    <color name="putih">#FFFFFFFF</color>
+    <color name="ungu_judul">#FF6A35C2</color>
+    <color name="abu_teks">#FF8A8A8A</color>
+    <color name="tombol_aktif">#FF6A35C2</color>
+    <color name="tombol_nonaktif">#FFE0E0E0</color>
+    <color name="teks_tombol_nonaktif">#FFFFFFFF</color>
+    <color name="hitam_kartu">#FF000000</color>
+</resources>
