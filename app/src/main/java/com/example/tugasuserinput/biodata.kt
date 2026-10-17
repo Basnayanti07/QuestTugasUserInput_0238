@@ -316,7 +316,9 @@ fun FormBiodata(modifier: Modifier = Modifier){
                             }
                             tampilHasil.value = true
                         }
-                    ){}
+                    ){
+                        Text(text = stringResource(id = R.string.tombol_proceed))
+                    }
                 }
             }
         }
