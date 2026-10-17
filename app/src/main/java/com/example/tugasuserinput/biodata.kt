@@ -15,6 +15,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
@@ -281,6 +283,40 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         }
                     }
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.jarak_besar)))
+
+                    Button(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(id = R.dimen.tinggi_tombol)),
+                        shape = bentukField,
+                        enabled = namaDepan.value.isNotEmpty()
+                                && namaBelakang.value.isNotEmpty()
+                                && email.value.isNotEmpty()
+                                && tglLahir.value.isNotEmpty()
+                                && experience.value.isNotEmpty(),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.tombol_aktif),
+                            disabledContainerColor = colorResource(id = R.color.tombol_nonaktif),
+                            disabledContentColor = colorResource(id = R.color.teks_tombol_nonaktif)
+                        ),
+                        onClick = {
+                            hasilNama.value = namaDepan.value + spasi + namaBelakang.value
+                            hasilEmail.value = email.value
+                            hasilTgl.value = tglLahir.value
+                            hasilExperience.value = experience.value
+                            hasilSkill.value = ""
+                            if (skillAndroid.value) {
+                                hasilSkill.value = hasilSkill.value + teksAndroid + spasi
+                            }
+                            if (skillUiux.value) {
+                                hasilSkill.value = hasilSkill.value + teksUiux + spasi
+                            }
+                            if (skillWeb.value) {
+                                hasilSkill.value = hasilSkill.value + teksWeb + spasi
+                            }
+                            tampilHasil.value = true
+                        }
+                    ){}
                 }
             }
         }
