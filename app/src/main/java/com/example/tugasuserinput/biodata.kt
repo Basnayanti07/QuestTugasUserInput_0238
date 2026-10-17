@@ -129,6 +129,19 @@ fun FormBiodata(modifier: Modifier = Modifier){
                             },
                             onValueChange = { namaDepan.value = it }
                         )
+                        OutlinedTextField(
+                            value = namaBelakang.value,
+                            singleLine = true,
+                            shape = bentukField,
+                            modifier = Modifier.weight(1f),
+                            label = {
+                                Text(
+                                    text = stringResource(id = R.string.label_nama_belakang),
+                                    fontSize = integerResource(id = R.integer.font_field).sp
+                                )
+                            },
+                            onValueChange = { namaBelakang.value = it }
+                        )
                     }
                 }
             }
