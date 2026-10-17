@@ -1,5 +1,7 @@
 package com.example.tugasuserinput
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
@@ -42,4 +44,6 @@ fun FormBiodata(modifier: Modifier = Modifier){
     val teksUiux = stringResource(id = R.string.skill_uiux)
     val teksWeb = stringResource(id = R.string.skill_web)
     val spasi = stringResource(id = R.string.spasi)
+
+    Box(modifier = modifier.fillMaxSize()){}
 }
