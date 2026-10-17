@@ -37,4 +37,9 @@ fun FormBiodata(modifier: Modifier = Modifier){
     val formatTanggal = stringResource(id = R.string.format_tanggal)
     val zonaWaktu = stringResource(id = R.string.zona_waktu)
     val bentukField = RoundedCornerShape(dimensionResource(id = R.dimen.radius_field))
+
+    val teksAndroid = stringResource(id = R.string.skill_android)
+    val teksUiux = stringResource(id = R.string.skill_uiux)
+    val teksWeb = stringResource(id = R.string.skill_web)
+    val spasi = stringResource(id = R.string.spasi)
 }
