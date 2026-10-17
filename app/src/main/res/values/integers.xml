@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <integer name="font_judul">28</integer>
+    <integer name="font_subjudul">10</integer>
+    <integer name="font_label_skill">14</integer>
+    <integer name="font_checkbox">11</integer>
+    <integer name="font_field">12</integer>
+</resources>
