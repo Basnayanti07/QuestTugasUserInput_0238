@@ -215,6 +215,10 @@ fun FormBiodata(modifier: Modifier = Modifier){
                                 },
                                 onValueChange = { }
                             )
+                            ExposedDropdownMenu(
+                                expanded = menuTerbuka.value,
+                                onDismissRequest = { menuTerbuka.value = false }
+                            ){}
                         }
                     }
                 }
