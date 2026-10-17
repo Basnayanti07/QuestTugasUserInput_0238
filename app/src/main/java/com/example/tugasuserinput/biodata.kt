@@ -3,6 +3,7 @@ package com.example.tugasuserinput
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -106,6 +107,7 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         fontSize = integerResource(id = R.integer.font_subjudul).sp,
                         color = colorResource(id = R.color.abu_teks)
                     )
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.jarak_besar)))
                 }
             }
         }
