@@ -21,6 +21,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -318,6 +319,42 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         }
                     ){
                         Text(text = stringResource(id = R.string.tombol_proceed))
+                    }
+
+                    if (tampilHasil.value) {
+                        Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.jarak_besar)))
+                        ElevatedCard(
+                            elevation = CardDefaults.cardElevation(
+                                defaultElevation = dimensionResource(id = R.dimen.elevasi_kartu)
+                            ),
+                            colors = CardDefaults.cardColors(
+                                containerColor = colorResource(id = R.color.hitam_kartu)
+                            ),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Column(modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_hasil))) {
+                                Text(
+                                    text = stringResource(id = R.string.hasil_nama) + hasilNama.value,
+                                    color = colorResource(id = R.color.putih)
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.hasil_email) + hasilEmail.value,
+                                    color = colorResource(id = R.color.putih)
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.hasil_tgl_lahir) + hasilTgl.value,
+                                    color = colorResource(id = R.color.putih)
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.hasil_experience) + hasilExperience.value,
+                                    color = colorResource(id = R.color.putih)
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.hasil_skill) + hasilSkill.value,
+                                    color = colorResource(id = R.color.putih)
+                                )
+                            }
+                        }
                     }
                 }
             }
