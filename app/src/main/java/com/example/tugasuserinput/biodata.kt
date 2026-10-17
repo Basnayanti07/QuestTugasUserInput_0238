@@ -280,6 +280,7 @@ fun FormBiodata(modifier: Modifier = Modifier){
                             )
                         }
                     }
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.jarak_besar)))
                 }
             }
         }
