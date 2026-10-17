@@ -1,14 +1,19 @@
 package com.example.tugasuserinput
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 
@@ -45,5 +50,14 @@ fun FormBiodata(modifier: Modifier = Modifier){
     val teksWeb = stringResource(id = R.string.skill_web)
     val spasi = stringResource(id = R.string.spasi)
 
-    Box(modifier = modifier.fillMaxSize()){}
+    Box(modifier = modifier.fillMaxSize()){
+        Image(
+            painter = painterResource(id = R.drawable.background),
+            contentDescription = stringResource(id = R.string.desc_bg),
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(dimensionResource(id = R.dimen.tinggi_header))
+        )
+    }
 }
