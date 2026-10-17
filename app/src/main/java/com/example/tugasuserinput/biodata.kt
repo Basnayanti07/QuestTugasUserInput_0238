@@ -158,6 +158,7 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         },
                         onValueChange = { email.value = it }
                     )
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.jarak_sedang)))
                 }
             }
         }
