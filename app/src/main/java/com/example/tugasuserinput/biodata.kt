@@ -233,6 +233,13 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         }
                     }
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.jarak_sedang)))
+
+                    Text(
+                        text = stringResource(id = R.string.judul_skill),
+                        fontSize = integerResource(id = R.integer.font_label_skill).sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }
