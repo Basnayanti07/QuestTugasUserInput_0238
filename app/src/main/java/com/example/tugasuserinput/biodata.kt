@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -247,7 +248,18 @@ fun FormBiodata(modifier: Modifier = Modifier){
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
-                    ){}
+                    ){
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = skillAndroid.value,
+                                onCheckedChange = { skillAndroid.value = it }
+                            )
+                            Text(
+                                text = stringResource(id = R.string.skill_android),
+                                fontSize = integerResource(id = R.integer.font_checkbox).sp
+                            )
+                        }
+                    }
                 }
             }
         }
