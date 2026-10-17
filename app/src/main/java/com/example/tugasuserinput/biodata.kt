@@ -18,8 +18,10 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -195,7 +197,25 @@ fun FormBiodata(modifier: Modifier = Modifier){
                             expanded = menuTerbuka.value,
                             onExpandedChange = { menuTerbuka.value = it },
                             modifier = Modifier.weight(1f)
-                        ){}
+                        ){
+                            OutlinedTextField(
+                                value = experience.value,
+                                singleLine = true,
+                                readOnly = true,
+                                shape = bentukField,
+                                modifier = Modifier.menuAnchor(MenuAnchorType.PrimaryNotEditable),
+                                label = {
+                                    Text(
+                                        text = stringResource(id = R.string.label_experience),
+                                        fontSize = integerResource(id = R.integer.font_field).sp
+                                    )
+                                },
+                                trailingIcon = {
+                                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = menuTerbuka.value)
+                                },
+                                onValueChange = { }
+                            )
+                        }
                     }
                 }
             }
