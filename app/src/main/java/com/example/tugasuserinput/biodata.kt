@@ -1,5 +1,6 @@
 package com.example.tugasuserinput
 
+import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -16,4 +17,8 @@ fun FormBiodata(modifier: Modifier = Modifier){
     var skillAndroid = remember { mutableStateOf(value = false) }
     var skillUiux = remember { mutableStateOf(value = false) }
     var skillWeb = remember { mutableStateOf(value = false) }
+
+    var bukaDialogTanggal = remember { mutableStateOf(value = false) }
+    var menuTerbuka = remember { mutableStateOf(value = false) }
+    val datePickerState = rememberDatePickerState()
 }
