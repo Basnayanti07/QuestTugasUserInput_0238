@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDatePickerState
@@ -114,7 +115,21 @@ fun FormBiodata(modifier: Modifier = Modifier){
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_kecil))
-                    ){}
+                    ){
+                        OutlinedTextField(
+                            value = namaDepan.value,
+                            singleLine = true,
+                            shape = bentukField,
+                            modifier = Modifier.weight(1f),
+                            label = {
+                                Text(
+                                    text = stringResource(id = R.string.label_nama_depan),
+                                    fontSize = integerResource(id = R.integer.font_field).sp
+                                )
+                            },
+                            onValueChange = { namaDepan.value = it }
+                        )
+                    }
                 }
             }
         }
