@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TugasUserInput</string>
+    <string name="judul_form">Form Biodata</string>
+    <string name="subjudul_form">Silahkan isi biodata Anda dibawah ini !!</string>
+    <string name="label_nama_depan">Nama Depan</string>
+    <string name="label_nama_belakang">Nama Belakang</string>
+    <string name="label_email">Email</string>
+    <string name="label_tgl_lahir">Tgl Lahir</string>
+    <string name="label_experience">Experience</string>
+    <string name="judul_skill">Pilih Skill Anda :</string>
+    <string name="skill_android">Android</string>
+    <string name="skill_uiux">UI/UX</string>
+    <string name="skill_web">Web</string>
+    <string name="tombol_proceed">Proceed</string>
+    <string name="format_tanggal">dd/MM/yyyy</string>
+    <string name="zona_waktu">UTC</string>
+    <string name="tombol_ok">OK</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="desc_bg">Gambar latar</string>
+    <string name="desc_kalender">Pilih tanggal lahir</string>
+    <string name="hasil_nama">"Nama : "</string>
+    <string name="hasil_email">"Email : "</string>
+    <string name="hasil_tgl_lahir">"Tgl Lahir : "</string>
+    <string name="hasil_experience">"Experience : "</string>
+    <string name="hasil_skill">"Skill : "</string>
+    <string name="spasi">" "</string>
+
+    <string-array name="daftar_experience">
+        <item>Pemula</item>
+        <item>Menengah</item>
+        <item>Mahir</item>
+    </string-array>
+</resources>
