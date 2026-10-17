@@ -21,4 +21,11 @@ fun FormBiodata(modifier: Modifier = Modifier){
     var bukaDialogTanggal = remember { mutableStateOf(value = false) }
     var menuTerbuka = remember { mutableStateOf(value = false) }
     val datePickerState = rememberDatePickerState()
+
+    var hasilNama = remember { mutableStateOf(value = "") }
+    var hasilEmail = remember { mutableStateOf(value = "") }
+    var hasilTgl = remember { mutableStateOf(value = "") }
+    var hasilExperience = remember { mutableStateOf(value = "") }
+    var hasilSkill = remember { mutableStateOf(value = "") }
+    var tampilHasil = remember { mutableStateOf(value = false) }
 }
