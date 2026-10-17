@@ -163,7 +163,20 @@ fun FormBiodata(modifier: Modifier = Modifier){
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_kecil))
-                    ){}
+                    ){
+                        OutlinedTextField(
+                            value = tglLahir.value,
+                            singleLine = true,
+                            readOnly = true,
+                            shape = bentukField,
+                            modifier = Modifier.weight(1f),
+                            label = {
+                                Text(
+                                    text = stringResource(id = R.string.label_tgl_lahir),
+                                    fontSize = integerResource(id = R.integer.font_field).sp
+                                )
+                            }
+                    }
                 }
             }
         }
