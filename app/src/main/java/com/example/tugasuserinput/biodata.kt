@@ -20,6 +20,8 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.DatePicker
+import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -31,6 +33,7 @@ import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -46,6 +49,10 @@ import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -358,6 +365,30 @@ fun FormBiodata(modifier: Modifier = Modifier){
                     }
                 }
             }
+        }
+    }
+    if (bukaDialogTanggal.value) {
+        DatePickerDialog(
+            onDismissRequest = { bukaDialogTanggal.value = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    datePickerState.selectedDateMillis?.let { millis ->
+                        val format = SimpleDateFormat(formatTanggal, Locale.getDefault())
+                        format.timeZone = TimeZone.getTimeZone(zonaWaktu)
+                        tglLahir.value = format.format(Date(millis))
+                    }
+                    bukaDialogTanggal.value = false
+                }) {
+                    Text(text = stringResource(id = R.string.tombol_ok))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { bukaDialogTanggal.value = false }) {
+                    Text(text = stringResource(id = R.string.tombol_batal))
+                }
+            }
+        ) {
+            DatePicker(state = datePickerState)
         }
     }
 }
